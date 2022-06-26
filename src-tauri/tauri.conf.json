@@ -12,7 +12,13 @@
   },
   "tauri": {
     "allowlist": {
-      "all": true
+      "fs": {
+        "all": true,
+        "scope": ["$APP/*"]
+      },
+      "path": {
+        "all": true
+      }
     },
     "bundle": {
       "active": true,
@@ -30,7 +36,7 @@
         "icons/icon.ico"
       ],
       "identifier": "com.nav.dev",
-      "longDescription": "An app that manages your to-dos",
+      "longDescription": "A modern app to manage TODOs.",
       "macOS": {
         "entitlements": null,
         "exceptionDomain": "",
@@ -39,7 +45,7 @@
         "signingIdentity": null
       },
       "resources": [],
-      "shortDescription": "A todo manager",
+      "shortDescription": "A TODO manager.",
       "targets": "all",
       "windows": {
         "certificateThumbprint": null,
@@ -57,9 +63,9 @@
       {
         "fullscreen": false,
         "height": 600,
-        "resizable": true,
+        "resizable": false,
         "title": "Todo",
-        "width": 800
+        "width": 850
       }
     ]
   }
