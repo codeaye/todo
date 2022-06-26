@@ -5,6 +5,7 @@ import Hero from "./components/hero";
 import Footer from "./components/footer";
 import Dialouge from "./components/dialogue";
 import { ToastContainer } from "react-toastify";
+
 import "react-toastify/dist/ReactToastify.css";
 
 const App = () => {
