@@ -6,6 +6,7 @@ An app to manage all of your TODOs in a modern and simple way.
 
 <details>
   <summary>Dark Mode</summary>
+  
   # Empty
   
   ![App Screenshot](assets/d1.jpg)
