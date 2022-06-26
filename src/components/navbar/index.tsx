@@ -15,17 +15,28 @@ const Navbar = () => {
   return (
     <div className="navbar bg-accent text-accent-content h-fit">
       <div className="w-full flex gap-2">
+        <button
+          className="btn btn-square btn-accent"
+          onClick={() => dispatch(toggleTheme())}
+        >
+          <label className={`swap ${theme && "swap-active"} swap-rotate`}>
+            <ThemeOff />
+            <ThemeOn />
+          </label>
+        </button>
         <div className="form-control flex-grow">
           <label className="input-group">
             <span className="bg-neutral text-neutral-content w-fill">TODO</span>
             <input
               type="text"
               placeholder="ie. Buy milk"
+              value={text}
               className="input text-base-content w-full"
               onKeyDown={(e) => {
                 if (e.key == "Enter") {
                   if (text.length == 0) return;
                   dispatch(add(text));
+                  setText("");
                 }
               }}
               onChange={(event) => {
@@ -40,6 +51,7 @@ const Navbar = () => {
             onClick={() => {
               if (text.length == 0) return;
               dispatch(add(text));
+              setText("");
             }}
           >
             <Plus />
@@ -53,20 +65,10 @@ const Navbar = () => {
               <SortOn />
             </label>
           </button>
-          <button
-            className="btn btn-square btn-accent"
-            onClick={() => dispatch(toggleTheme())}
-          >
-            <label className={`swap ${theme && "swap-active"} swap-rotate`}>
-              <ThemeOff />
-              <ThemeOn />
+          <button className="btn btn-square btn-accent">
+            <label htmlFor="my-modal-1">
+              <DeleteAll />
             </label>
-          </button>
-          <button
-            className="btn btn-square btn-accent"
-            onClick={() => dispatch(removeAll())}
-          >
-            <DeleteAll />
           </button>
         </div>
       </div>

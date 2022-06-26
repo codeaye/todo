@@ -1,4 +1,5 @@
-import { Delete, DoneOff, DoneOn } from "./icons";
+import { useState } from "react";
+import { Delete, DoneOff, DoneOn, Revert } from "./icons";
 
 const Todo = ({
   text,
@@ -11,6 +12,8 @@ const Todo = ({
   onDelete: Function;
   onDoneChange: Function;
 }) => {
+  const [inConfirm, setInConfirm] = useState(false);
+
   return (
     <div className="p-3 select-none">
       <div
@@ -27,14 +30,43 @@ const Todo = ({
             >
               {text}
             </p>
-            <label className="swap swap-rotate w-fit px-4 hover:text-info">
-              <input type="checkbox" onChange={() => onDoneChange()} />
-              <DoneOff />
-              <DoneOn />
-            </label>
-            <button className="hover:text-info" onClick={() => onDelete()}>
-              <Delete />
-            </button>
+            {inConfirm ? (
+              <div className="flex flex-wrap gap-2">
+                <button
+                  className="btn btn-xs btn-error"
+                  onClick={() => {
+                    onDelete();
+                    setInConfirm(false);
+                  }}
+                >
+                  Delete
+                </button>
+                <button
+                  className="hover:text-info"
+                  onClick={() => setInConfirm(false)}
+                >
+                  <Revert />
+                </button>
+              </div>
+            ) : (
+              <div className="flex flex-wrap">
+                <button
+                  className={`swap swap-rotate w-fit px-4 hover:text-info ${
+                    done && "swap-active"
+                  }`}
+                  onClick={() => onDoneChange()}
+                >
+                  <DoneOff />
+                  <DoneOn />
+                </button>
+                <button
+                  className="hover:text-info"
+                  onClick={() => setInConfirm(true)}
+                >
+                  <Delete />
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
