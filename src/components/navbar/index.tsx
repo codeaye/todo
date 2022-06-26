@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleFilter } from "../../reducers/filter";
 import { toggleTheme } from "../../reducers/theme";
-import { add, removeAll, updateTodos } from "../../reducers/todo";
+import { add } from "../../reducers/todo";
 import { RootState } from "../../Store";
 import { DeleteAll, Plus, SortOff, SortOn, ThemeOff, ThemeOn } from "./icons";
 
