@@ -20,9 +20,7 @@ const Hero = () => {
               .map((todo) => ({
                 id: todo.id,
                 title: todo.title,
-                completed: todos.done.find((done) => done === todo.id)
-                  ? true
-                  : false,
+                completed: todos.done.includes(todo.id) ? true : false,
               }))
               .sort((a, b) =>
                 filter
@@ -36,7 +34,7 @@ const Hero = () => {
                     done={todo.completed}
                     onDelete={() => dispatch(remove(todo))}
                     onDoneChange={() => dispatch(toggleDone(todo))}
-                    key={i}
+                    key={todo.id}
                   />
                 );
               })}
