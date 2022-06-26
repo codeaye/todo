@@ -8,5 +8,5 @@ fn main() {
     tauri::Builder::default()
         .menu(tauri::Menu::os_default(&context.package_info().name))
         .run(context)
-        .expect("error while running tauri application");
+        .expect("Error while running tauri application");
 }
