@@ -1,9 +1,10 @@
-name: "CI"
+name: "Build And Release"
 
 on:
   push:
-    branches:
-      - main
+    branches: ["release"]
+  pull_request:
+    branches: ["release"]
 
 jobs:
   publish-tauri:
@@ -34,8 +35,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tagName: app-v__VERSION__ # the action automatically replaces \_\_VERSION\_\_ with the app version
-          releaseName: "App v__VERSION__"
-          releaseBody: "See the assets to download this version and install."
+          tagName: todo-v__VERSION__
+          releaseName: "Todo v__VERSION__"
+          releaseBody: "See the assets to download this version and install the app."
           releaseDraft: true
           prerelease: false
