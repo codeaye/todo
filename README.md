@@ -7,26 +7,42 @@ An app to manage all of your TODOs in a modern and simple way.
 <details>
   <summary>Dark Mode</summary>
   # Empty
-  ![App Screenshot](assets/d1)
+  
+  ![App Screenshot](assets/d1.jpg)
+  
   # One Active
-  ![App Screenshot](assets/d2)
+  
+  ![App Screenshot](assets/d2.jpg)
+  
   # Delete Singular
-  ![App Screenshot](assets/d3)
+  
+  ![App Screenshot](assets/d3.jpg)
+  
   # Delete All
-  ![App Screenshot](assets/d4)
+  
+  ![App Screenshot](assets/d4.jpg)
 </details>
 
 <details>
   <summary>Light Mode</summary>
+  
   # Empty
-  ![App Screenshot](assets/l1)
+  
+  ![App Screenshot](assets/l1.jpg)
+  
   # One Active
-  ![App Screenshot](assets/l2)
+  
+  ![App Screenshot](assets/l2.jpg)
+  
   # Delete Singular
-  ![App Screenshot](assets/l3)
+  
+  ![App Screenshot](assets/l3.jpg)
+  
   # Delete All
-  ![App Screenshot](assets/l4)
+  
+  ![App Screenshot](assets/l4.jpg)
 </details>
+
 ## Installation
 
 Go to [releases](https://github.com/codeaye/todo/releases/) and go to the latest version.
