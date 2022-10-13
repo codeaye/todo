@@ -2,7 +2,7 @@
 
 An app to manage all of your TODOs in a modern and simple way.
 
-## Screenshots
+## CLICK ONE OF THESE TO SEE SCREENSHOTS ⚠️
 
 <details>
   <summary>Dark Mode</summary>
